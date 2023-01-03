@@ -310,6 +310,7 @@ namespace WindowsFormsApp1
             this.AmountTb.Name = "AmountTb";
             this.AmountTb.Size = new System.Drawing.Size(169, 22);
             this.AmountTb.TabIndex = 3;
+            this.AmountTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AmountTb_KeyPress);
             // 
             // DriverTb
             // 
@@ -687,7 +688,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox AmountTb;
         private System.Windows.Forms.TextBox DriverTb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -719,5 +719,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label UnameLbl;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.TextBox AmountTb;
     }
 }

@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         private void Clear()
         {
             UnameTb.Text = "";
-            PhoneTb.Text = "";
+            PhoneNmTb.Text = "";
             PasswordTb.Text = "";
         }
 
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (UnameTb.Text == "" || PhoneTb.Text == "" || PasswordTb.Text == "")
+            if (UnameTb.Text == "" || PhoneNmTb.Text == "" || PasswordTb.Text == "")
             {
                 MessageBox.Show("Eksik Bilgi Girdiniz!");
             }
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
                 {
                     MySqlCommand cmd = new MySqlCommand("insert into kullanıcı(kullanici_adi,kullanici_telno,sifre) values (@UN,@UP,@UPa)", DB.baglanti());
                     cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
-                    cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@UP", PhoneNmTb.Text);
                     cmd.Parameters.AddWithValue("@UPa", PasswordTb.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Kullanıcı Başarıyla Kaydedildi");
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
         private void UserDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             UnameTb.Text = UserDGV.SelectedRows[0].Cells[1].Value.ToString();
-            PhoneTb.Text = UserDGV.SelectedRows[0].Cells[2].Value.ToString();
+            PhoneNmTb.Text = UserDGV.SelectedRows[0].Cells[2].Value.ToString();
             PasswordTb.Text = UserDGV.SelectedRows[0].Cells[3].Value.ToString();
             if (UnameTb.Text == "")
             {
@@ -109,7 +109,7 @@ namespace WindowsFormsApp1
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (UnameTb.Text == "" || PhoneTb.Text == "" || PasswordTb.Text == "") 
+            if (UnameTb.Text == "" || PhoneNmTb.Text == "" || PasswordTb.Text == "") 
             {
                 MessageBox.Show("Eksik Bilgi Girdiniz!");
             }
@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
                 {
                     MySqlCommand cmd = new MySqlCommand("update kullanıcı set kullanici_adi=@UN,kullanici_telno=@UP,sifre=@UPa where kullanici_id =@CKey", DB.baglanti());
                     cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
-                    cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@UP", PhoneNmTb.Text);
                     cmd.Parameters.AddWithValue("@UPa", PasswordTb.Text);
                     cmd.Parameters.AddWithValue("@UKey", Key);
                     cmd.ExecuteNonQuery();
@@ -175,6 +175,11 @@ namespace WindowsFormsApp1
             panel Obj = new panel();
             Obj.Show();
             this.Hide();
+        }
+
+        private void PhoneNmTb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

@@ -219,5 +219,10 @@ namespace WindowsFormsApp1
             this.Hide();
             Obj.Show();
         }
+
+        private void MilleageTb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

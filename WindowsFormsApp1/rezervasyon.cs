@@ -175,5 +175,10 @@ namespace WindowsFormsApp1
             Obj.Show();
             this.Hide();
         }
+
+        private void AmountTb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

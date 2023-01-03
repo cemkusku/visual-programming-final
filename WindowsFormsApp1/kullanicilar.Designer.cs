@@ -29,9 +29,9 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
@@ -41,7 +41,6 @@ namespace WindowsFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.PasswordTb = new System.Windows.Forms.TextBox();
-            this.PhoneTb = new System.Windows.Forms.TextBox();
             this.UnameTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,6 +60,7 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.PhoneNmTb = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDGV)).BeginInit();
             this.panel2.SuspendLayout();
@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.PasswordTb);
-            this.panel1.Controls.Add(this.PhoneTb);
+            this.panel1.Controls.Add(this.PhoneNmTb);
             this.panel1.Controls.Add(this.UnameTb);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(153, 14);
@@ -139,26 +139,26 @@ namespace WindowsFormsApp1
             // 
             // UserDGV
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.UserDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UserDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.UserDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UserDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.UserDGV.ColumnHeadersHeight = 4;
             this.UserDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.UserDGV.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UserDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.UserDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.UserDGV.Location = new System.Drawing.Point(0, 307);
             this.UserDGV.Margin = new System.Windows.Forms.Padding(4);
@@ -207,7 +207,7 @@ namespace WindowsFormsApp1
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(376, 73);
+            this.label9.Location = new System.Drawing.Point(385, 74);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(141, 18);
@@ -233,14 +233,6 @@ namespace WindowsFormsApp1
             this.PasswordTb.Name = "PasswordTb";
             this.PasswordTb.Size = new System.Drawing.Size(169, 22);
             this.PasswordTb.TabIndex = 3;
-            // 
-            // PhoneTb
-            // 
-            this.PhoneTb.Location = new System.Drawing.Point(380, 95);
-            this.PhoneTb.Margin = new System.Windows.Forms.Padding(4);
-            this.PhoneTb.Name = "PhoneTb";
-            this.PhoneTb.Size = new System.Drawing.Size(169, 22);
-            this.PhoneTb.TabIndex = 3;
             // 
             // UnameTb
             // 
@@ -464,6 +456,15 @@ namespace WindowsFormsApp1
             this.label11.TabIndex = 31;
             this.label11.Text = "Araçlar";
             // 
+            // PhoneNmTb
+            // 
+            this.PhoneNmTb.Location = new System.Drawing.Point(388, 95);
+            this.PhoneNmTb.Margin = new System.Windows.Forms.Padding(4);
+            this.PhoneNmTb.Name = "PhoneNmTb";
+            this.PhoneNmTb.Size = new System.Drawing.Size(169, 22);
+            this.PhoneNmTb.TabIndex = 3;
+            this.PhoneNmTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneNmTb_KeyPress);
+            // 
             // kullanicilar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,7 +523,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox PasswordTb;
-        private System.Windows.Forms.TextBox PhoneTb;
         private System.Windows.Forms.TextBox UnameTb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
@@ -539,5 +539,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox PhoneNmTb;
     }
 }

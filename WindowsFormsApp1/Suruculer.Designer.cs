@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.DrAddTb = new System.Windows.Forms.TextBox();
-            this.PhoneTb = new System.Windows.Forms.TextBox();
+            this.PhoneNmTb = new System.Windows.Forms.TextBox();
             this.DrNameTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -109,7 +109,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.DrAddTb);
-            this.panel1.Controls.Add(this.PhoneTb);
+            this.panel1.Controls.Add(this.PhoneNmTb);
             this.panel1.Controls.Add(this.DrNameTb);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(155, 12);
@@ -353,13 +353,14 @@ namespace WindowsFormsApp1
             this.DrAddTb.Size = new System.Drawing.Size(219, 98);
             this.DrAddTb.TabIndex = 3;
             // 
-            // PhoneTb
+            // PhoneNmTb
             // 
-            this.PhoneTb.Location = new System.Drawing.Point(247, 96);
-            this.PhoneTb.Margin = new System.Windows.Forms.Padding(4);
-            this.PhoneTb.Name = "PhoneTb";
-            this.PhoneTb.Size = new System.Drawing.Size(169, 22);
-            this.PhoneTb.TabIndex = 3;
+            this.PhoneNmTb.Location = new System.Drawing.Point(247, 96);
+            this.PhoneNmTb.Margin = new System.Windows.Forms.Padding(4);
+            this.PhoneNmTb.Name = "PhoneNmTb";
+            this.PhoneNmTb.Size = new System.Drawing.Size(160, 22);
+            this.PhoneNmTb.TabIndex = 3;
+            this.PhoneNmTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneNmTb_KeyPress);
             // 
             // DrNameTb
             // 
@@ -739,7 +740,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox DrAddTb;
-        private System.Windows.Forms.TextBox PhoneTb;
         private System.Windows.Forms.TextBox DrNameTb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button DeleteBtn;
@@ -759,6 +759,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.TextBox PhoneNmTb;
     }
 }
 

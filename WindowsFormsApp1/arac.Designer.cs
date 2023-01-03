@@ -635,6 +635,7 @@ namespace WindowsFormsApp1
             this.MilleageTb.Name = "MilleageTb";
             this.MilleageTb.Size = new System.Drawing.Size(139, 22);
             this.MilleageTb.TabIndex = 3;
+            this.MilleageTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MilleageTb_KeyPress);
             // 
             // ColorTb
             // 

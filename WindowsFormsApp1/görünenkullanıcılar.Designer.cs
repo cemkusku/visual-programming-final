@@ -264,6 +264,7 @@ namespace WindowsFormsApp1
             this.PhoneTb.Name = "PhoneTb";
             this.PhoneTb.Size = new System.Drawing.Size(169, 22);
             this.PhoneTb.TabIndex = 3;
+            this.PhoneTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneTb_KeyPress);
             // 
             // görünenkullanıcılar
             // 

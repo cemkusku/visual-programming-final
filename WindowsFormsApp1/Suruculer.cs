@@ -16,14 +16,13 @@ namespace WindowsFormsApp1
         public Suruculer()
         {
             InitializeComponent();
-            //GetCars();
             ShowSuruculer();
         }
         private void Clear()
         {
             DrNameTb.Text = "";
             GenCb.SelectedIndex = -1;
-            PhoneTb.Text = "";
+            PhoneNmTb.Text = "";
             DrAddTb.Text = "";
 
         }
@@ -37,22 +36,10 @@ namespace WindowsFormsApp1
             sda.Fill(ds);
             DriverDGV.DataSource = ds.Tables[0];
         }
-        /*private void GetCars()
-        {
-            Con.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from araclar",Con);
-            MySqlDataReader rdr;
-            rdr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("arac_plaka",typeof(string));
-            dt.Load(rdr);
-            VehicleCb.ValueMember = "arac_plaka";
-            VehicleCb.DataSource = dt;
-            Con.Close();
-        }*/
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAddTb.Text == "" || RatingCb.SelectedIndex==-1)
+            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneNmTb.Text == "" || DrAddTb.Text == "" || RatingCb.SelectedIndex==-1)
             {
                 MessageBox.Show("Eksik Bilgi Girdiniz!");
             }
@@ -63,7 +50,7 @@ namespace WindowsFormsApp1
                     MySqlCommand cmd = new MySqlCommand("insert into suruculer(isim, telefon_num, adres, dogmgunu, ise_gir_tar, cinsiyeti, degerlendirme) " +
                         "values(@isim,@Dtelefon_num,@adres,@dogmgunu,@giris_tarihi,@cinsiyet,@degerlendirme)", DB.baglanti());
                     cmd.Parameters.AddWithValue("@isim", DrNameTb.Text);
-                    cmd.Parameters.AddWithValue("@Dtelefon_num", PhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@Dtelefon_num", PhoneNmTb.Text);
                     cmd.Parameters.AddWithValue("@adres", DrAddTb.Text);
                     cmd.Parameters.AddWithValue("@dogmgunu", DOB.Value);
                     cmd.Parameters.AddWithValue("@giris_tarihi", JoinDate.Value);
@@ -114,7 +101,7 @@ namespace WindowsFormsApp1
         private void DriverDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DrNameTb.Text = DriverDGV.SelectedRows[0].Cells[1].Value.ToString();
-            PhoneTb.Text = DriverDGV.SelectedRows[0].Cells[2].Value.ToString();
+            PhoneNmTb.Text = DriverDGV.SelectedRows[0].Cells[2].Value.ToString();
             DrAddTb.Text = DriverDGV.SelectedRows[0].Cells[3].Value.ToString();
             DOB.Text = DriverDGV.SelectedRows[0].Cells[4].Value.ToString();
             JoinDate.Text = DriverDGV.SelectedRows[0].Cells[5].Value.ToString();
@@ -159,7 +146,7 @@ namespace WindowsFormsApp1
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAddTb.Text == "" || RatingCb.SelectedIndex == -1)
+            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneNmTb.Text == "" || DrAddTb.Text == "" || RatingCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Sürücü Seçiniz!");
             }
@@ -169,7 +156,7 @@ namespace WindowsFormsApp1
                 {
                     MySqlCommand cmd = new MySqlCommand("update suruculer set isim=@isim, telefon_num=@Dtelefon_num, adres=@adres, dogmgunu=@dogmgunu, ise_gir_tar=@giris_tarihi, cinsiyeti=@cinsiyet, degerlendirme=@degerlendirme where surucu_id=@DrKey", DB.baglanti());
                     cmd.Parameters.AddWithValue("@isim", DrNameTb.Text);
-                    cmd.Parameters.AddWithValue("@Dtelefon_num", PhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@Dtelefon_num", PhoneNmTb.Text);
                     cmd.Parameters.AddWithValue("@adres", DrAddTb.Text);
                     cmd.Parameters.AddWithValue("@dogmgunu", DOB.Value);
                     cmd.Parameters.AddWithValue("@giris_tarihi", JoinDate.Value);
@@ -230,6 +217,11 @@ namespace WindowsFormsApp1
             kullanicilar Obj = new kullanicilar();
             Obj.Show();
             this.Hide();
+        }
+
+        private void PhoneNmTb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

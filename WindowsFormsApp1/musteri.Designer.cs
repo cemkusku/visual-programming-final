@@ -45,7 +45,8 @@ namespace WindowsFormsApp1
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.CustAddTb = new System.Windows.Forms.TextBox();
-            this.CustPhoneTb = new System.Windows.Forms.TextBox();
+            this.x = new System.Windows.Forms.TextBox();
+            this.PhoneNmTb = new System.Windows.Forms.TextBox();
             this.CustNameTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -163,7 +164,8 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.CustAddTb);
-            this.panel1.Controls.Add(this.CustPhoneTb);
+            this.panel1.Controls.Add(this.x);
+            this.panel1.Controls.Add(this.PhoneNmTb);
             this.panel1.Controls.Add(this.CustNameTb);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(153, 14);
@@ -295,13 +297,22 @@ namespace WindowsFormsApp1
             this.CustAddTb.Size = new System.Drawing.Size(219, 93);
             this.CustAddTb.TabIndex = 3;
             // 
-            // CustPhoneTb
+            // x
             // 
-            this.CustPhoneTb.Location = new System.Drawing.Point(459, 95);
-            this.CustPhoneTb.Margin = new System.Windows.Forms.Padding(4);
-            this.CustPhoneTb.Name = "CustPhoneTb";
-            this.CustPhoneTb.Size = new System.Drawing.Size(169, 22);
-            this.CustPhoneTb.TabIndex = 3;
+            this.x.Location = new System.Drawing.Point(666, 345);
+            this.x.Margin = new System.Windows.Forms.Padding(4);
+            this.x.Name = "x";
+            this.x.Size = new System.Drawing.Size(169, 22);
+            this.x.TabIndex = 3;
+            // 
+            // PhoneNmTb
+            // 
+            this.PhoneNmTb.Location = new System.Drawing.Point(458, 94);
+            this.PhoneNmTb.Margin = new System.Windows.Forms.Padding(4);
+            this.PhoneNmTb.Name = "PhoneNmTb";
+            this.PhoneNmTb.Size = new System.Drawing.Size(169, 22);
+            this.PhoneNmTb.TabIndex = 3;
+            this.PhoneNmTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneNmTb_KeyPress);
             // 
             // CustNameTb
             // 
@@ -651,7 +662,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox CustAddTb;
-        private System.Windows.Forms.TextBox CustPhoneTb;
+        private System.Windows.Forms.TextBox x;
         private System.Windows.Forms.TextBox CustNameTb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
@@ -669,5 +680,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label TotAmtLbl;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.TextBox PhoneNmTb;
     }
 }

@@ -115,5 +115,10 @@ namespace WindowsFormsApp1
             Obj.Show();
             this.Hide();
         }
+
+        private void PhoneTb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }
